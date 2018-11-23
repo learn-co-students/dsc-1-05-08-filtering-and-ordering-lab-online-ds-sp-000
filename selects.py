@@ -1,8 +1,8 @@
 def select_all_female_dogs_name_and_breed():
-    return ('''SELECT dogs.name, dogs.breed FROM dogs;''').fetchall()
+    return ('''SELECT dogs.name, dogs.breed FROM dogs WHERE gender = "F";''').fetchall()
 
 def select_all_dogs_names_in_alphabetical_order():
-    return ('''SELECT dogs.name FROM dogs ORDER BY ASC;''').fetchall()
+    return ('''SELECT dogs.name FROM dogs ORDER BY name ASC;''').fetchall()
 
 def select_nameless_dog():
     return ('''SELECT dogs.name FROM dogs WHERE name is NULL;''').fetchall()
